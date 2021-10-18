@@ -25,6 +25,11 @@ class Complex{
     double r();
     double phase();
     double phi();
+    
+    
+    //Overloading between Complex & double
+    Complex operator*( const double& rhs ) const;
+    Complex operator/( const double& rhs ) const;
 
     private:
     double real_;

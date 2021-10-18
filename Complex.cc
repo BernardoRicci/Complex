@@ -18,3 +18,11 @@ Complex::Complex(const Complex& complex){
     real_=complex.real_;
     imm_=complex.imm_;
 }
+
+//Functions
+double Complex::re(const Complex& rhs){
+    return rhs.real_;
+}
+double Complex::im(const Complex& rhs){
+    return rhs.imm_;
+}

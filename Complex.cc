@@ -20,9 +20,10 @@ Complex::Complex(const Complex& complex){
 }
 
 //Functions
-double Complex::re(const Complex& rhs){
-    return rhs.real_;
+double Complex::re(){
+    return real_;
 }
-double Complex::im(const Complex& rhs){
-    return rhs.imm_;
+double Complex::im(){
+    return imm_;
 }
+

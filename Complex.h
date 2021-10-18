@@ -21,6 +21,10 @@ class Complex{
     //Functions
     double re();
     double im();
+    double mag();
+    double r();
+    double phase();
+    double phi();
 
     private:
     double real_;

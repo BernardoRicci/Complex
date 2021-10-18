@@ -33,4 +33,16 @@ double Complex::re(){
 double Complex::im(){
     return imm_;
 }
+double Complex::mag(){
+    return sqrt( (real_*real_) + (imm_*imm_));
+}
+double Complex::r(){
+    return sqrt( (real_*real_) + (imm_*imm_));
+}
+double Complex::phase(){
+    return atan(imm_/real_);
+}
+double Complex::phi(){
+    return atan(imm_/real_);
+}
 

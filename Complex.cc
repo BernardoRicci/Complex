@@ -46,3 +46,10 @@ double Complex::phi(){
     return atan(imm_/real_);
 }
 
+//Overloading between Complex & double
+Complex Complex::operator*( const double& rhs ) const {
+    return Complex(real_*rhs, imm_*rhs);
+}
+Complex Complex::operator/( const double& rhs ) const {
+    return Complex(real_/rhs, imm_/rhs);
+}

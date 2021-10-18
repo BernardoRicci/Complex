@@ -21,7 +21,7 @@ Complex::Complex(const Complex& complex){
 
 //print
 void Complex::print() const {
-   cout << "complex number = (" << Re_ << ")  + i (" << Im_ << ")" << endl;
+   cout << "complex number = (" << real_ << ")  + i (" << imm_ << ")" << endl;
 }
 
 //Functions

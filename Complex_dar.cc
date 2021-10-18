@@ -1,7 +1,7 @@
 // Implementation of the COMPLEX class
 
 // here I include the header file for the class Complex
-#include "Complex.h"
+#include "Complex_dar.h"
 
 #include <iostream>
 #include <math.h>
@@ -83,11 +83,53 @@ Complex Complex::operator/ (const Complex& rhs) const {
 
 }
 
-Complex Complex::operator= (const Complex& rhs) const {
+const Complex& Complex::operator= (const Complex& rhs) {
 
   Re_ = rhs.Re_;
   Im_ = rhs.Im_;
 
+  return *this;
+
+}
+
+const Complex& Complex::operator+= (const Complex& rhs) {
+
+  Re_ += rhs.Re_;
+  Im_ += rhs.Im_;
+
+  return *this;
+
+}
+
+const Complex& Complex::operator-= (const Complex& rhs) {
+
+  Re_ -= rhs.Re_;
+  Im_ -= rhs.Im_;
+
+  return *this;
+
+}
+
+const Complex& Complex::operator*= (const Complex& rhs) {
+
+  double new_re = Re_ * rhs.Re_ - Im_ * rhs.Im_;
+  double new_im = Re_ * rhs.Im_ + Im_ * rhs.Re_;
+
+  Re_ = new_re;
+  Im_ = new_im;
+
+  return *this;
+
+}
+
+const Complex& Complex::operator/= (const Complex& rhs) {
+
+  double new_re = (Re_ * rhs.Re_ + Im_ * rhs.Im_) * (1/(rhs.Re_*rhs.Re_ + rhs.Im_*rhs.Im_));
+  double new_im =  (Re_ + rhs.Im_ - Im_ * rhs.Re_) * (1/(rhs.Re_*rhs.Re_ + rhs.Im_*rhs.Im_));
+
+  Re_ = new_re;
+  Im_ = new_im;
+  
   return *this;
 
 }

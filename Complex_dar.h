@@ -30,10 +30,10 @@ public:
   Complex operator/ (const Complex& rhs) const; //DIVISION between two complex numbers
 
   const Complex& operator= (const Complex& rhs); //Assignment operator
-  Complex operator+= (const Complex& rhs) const; //Sum & Assignment operator
-  Complex operator-= (const Complex& rhs) const; //Difference & Assignment operator
-  Complex operator*= (const Complex& rhs) const; //Moltiplication & Assignment operator
-  Complex operator/= (const Complex& rhs) const; //Division & Assignment operator
+  const Complex& operator+= (const Complex& rhs); //Sum & Assignment operator
+  const Complex& operator-= (const Complex& rhs); //Difference & Assignment operator
+  const Complex& operator*= (const Complex& rhs); //Moltiplication & Assignment operator
+  const Complex& operator/= (const Complex& rhs); //Division & Assignment operator
 
 private:
   double Re_, Im_;

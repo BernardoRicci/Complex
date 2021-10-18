@@ -14,7 +14,9 @@ class Complex{
     //Setters
     void SetReal(double real) { real_=real;};
     void SetImmaginary(double imm) { imm_=imm; };
-
+    
+    //print
+    void print() const;
 
     //Functions
     double re();

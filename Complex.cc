@@ -19,6 +19,13 @@ Complex::Complex(const Complex& complex){
     imm_=complex.imm_;
 }
 
+//print
+void Complex::print() const {
+  using namespace std;
+  cout << "datum: " << real_
+       << " +/- i" << imm_ << endl;
+}
+
 //Functions
 double Complex::re(){
     return real_;

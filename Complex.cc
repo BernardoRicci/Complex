@@ -21,9 +21,7 @@ Complex::Complex(const Complex& complex){
 
 //print
 void Complex::print() const {
-  using namespace std;
-  cout << "datum: " << real_
-       << " +/- i" << imm_ << endl;
+   cout << "complex number = (" << Re_ << ")  + i (" << Im_ << ")" << endl;
 }
 
 //Functions

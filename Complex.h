@@ -17,7 +17,8 @@ class Complex{
 
 
     //Functions
-    double re();
+    double re(const Complex& rhs);
+    double im(const Complex& rhs);
 
     private:
     double real_;
